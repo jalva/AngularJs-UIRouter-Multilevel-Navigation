@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://getbootstrap.com/dist/css/bootstrap.min.css" />
+
+</head>
+<body ng-app="app" ng-cloak>
+
+    <h3>Popup Content</h3>
+
+    <ui-view></ui-view>
+
+    <!-- scripts -->
+    <script src="/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.11/angular.min.js"></script>
+    <script src="//unpkg.com/angular-ui-router@1.0.0-beta.3/release/angular-ui-router.js"></script>
+
+
+    <!-- Dummy page for testing the popups which are opened in a new browser window by the main app (it needs to have the corresponding ui-router states initialized)  -->
+    <script type="text/javascript">
+
+        (function () {
+            'use strict';
+
+            var app = angular.module('app', ['ui.router']);
+
+
+            app.config(function ($stateProvider, $locationProvider, uiStates) {
+
+                function cntrlr($state, $scope, $stateParams) {
+                    $scope.stateName = $state.current.name;
+                    $scope.$state = $state;
+                    $scope.itemId = $stateParams.itemId;
+                }
+
+
+                /* Register the states targeted by the side menu commands  */
+                var states = $filter('filter')(uiStates, function (item) { return item.behavior == 'newWindow'; });
+                states.forEach(function (s) {
+                    $stateProvider.state(s);
+                });
+            });
+
+
+        })();
+
+    </script>
+
+
+    <script type="text/ng-template" id="contentTemplate">
+        <h4>Current state: {{$state.current.name}}</h4>
+        <h4>Item Id: {{itemId}}</h4>
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+﻿@using UINavigation2Controller.Models2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+    <style type="text/css">
+        .navBardemoBasicUsage md-content .ext-content {
+            padding: 50px;
+            margin: 20px;
+            background-color: #FFF2E0;
+        }
+
+        .side-nav {
+            margin-left: -15px;
+            margin-top: 30px;
+        }
+
+            .side-nav ul > li {
+                float: none;
+            }
+
+            .side-nav ul {
+                width: 100%;
+            }
+
+        .navbar {
+            margin-bottom: 0;
+        }
+
+        .navbar-default .navbar-nav > li > a {
+            font-weight: bold;
+        }
+
+        .top-nav .navbar-nav > li > a {
+            color: #3498db;
+            font-size: 1.2em;
+        }
+
+        a.disabled {
+            color: #AAAAAA;
+            cursor: default;
+            pointer-events: none;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body ng-app="navBarDemoBasicUsage" ng-cloak>
+
+    @RenderBody()
+
+    <!-- scripts -->
+    <script src="~/scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/scripts/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="//unpkg.com/angular-ui-router@1.0.0-beta.3/release/angular-ui-router.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-mocks.js"></script>
+
+    <!-- the nav component  -->
+    <script type="text/javascript" src="/app/app.js"></script>
+    <script type="text/javascript" src="/app/navService.js"></script>
+    <script type="text/javascript" src="/app/nav-menu-component.js"></script>
+    <script type="text/javascript" src="/app/item-picker-controller.js"></script>
+    <script type="text/javascript">
+        app.constant("uiStates", @Html.Raw(Html.GetUiRouterStates()));
+    </script>
+
+    @RenderSection("scripts", required: false)
+
+
+</body>
+</html>

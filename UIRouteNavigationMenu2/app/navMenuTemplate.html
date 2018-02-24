@@ -1,0 +1,5 @@
+﻿<ul class="nav navbar-nav">
+    <li data-ng-repeat="item in $ctrl.items" ng-class="{'active':item.selected}">
+        <a ng-click="$ctrl.click(item)" ng-class="{'disabled':item.disabled}" href>{{::item.name}}</a>
+    </li>
+</ul>

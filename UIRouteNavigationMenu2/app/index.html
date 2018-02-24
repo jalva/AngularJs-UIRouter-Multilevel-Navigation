@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+
+    <style type="text/css">
+        .navBardemoBasicUsage md-content .ext-content {
+            padding: 50px;
+            margin: 20px;
+            background-color: #FFF2E0;
+        }
+
+        .side-nav {
+            margin-left: -15px;
+            margin-top: 30px;
+        }
+
+            .side-nav ul > li {
+                float: none;
+            }
+
+            .side-nav ul {
+                width: 100%;
+            }
+
+        .navbar {
+            margin-bottom: 0;
+        }
+
+        .navbar-default .navbar-nav > li > a {
+            font-weight: bold;
+        }
+
+        .top-nav .navbar-nav > li > a {
+            color: #3498db;
+            font-size: 1.2em;
+        }
+
+        a.disabled {
+            color: #AAAAAA;
+            cursor: default;
+            pointer-events: none;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+<body ng-app="navBarDemoBasicUsage" >
+
+    <nav class="navbar navbar-default top-nav">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3 col-md-1">
+
+                </div>
+                <div class="col-sm-9 col-md-11">
+                    <!-- Top Menu -->
+                    <nav-menu level="1"></nav-menu>
+                    <!--/-->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-default sub-nav" style="background-color: lightgray">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3 col-md-1">
+
+                </div>
+                <div class="col-sm-9 col-md-11">
+                    <!-- Sub Menu -->
+                    <nav-menu level="2"></nav-menu>
+                    <!--/-->
+
+                    <div style="float:right;" ng-controller="itemSelectorController">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                {{selectedItemId || 'Select Item'}}
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                <li><a href ng-click="clickItem(123)">Item 123</a></li>
+                                <li><a href ng-click="clickItem(456)">Item 456</a></li>
+                                <li><a href ng-click="clickItem(789)">Item 789</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-1">
+                <nav class="navbar navbar-default side-nav">
+                    <!-- Side Menu-->
+                    <nav-menu level="3"></nav-menu>
+                    <!--/-->
+                </nav>
+            </div>
+            <div class="col-sm-9 col-md-11" ng-controller="contentController">
+                <!-- The Main Content -->
+                <ui-view></ui-view>
+                <!-- /-->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.10/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.0-rc.1/angular-ui-router.min.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-mocks.js"></script>
+
+    <!-- the nav component  -->
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="nav-menu-component.js"></script>
+
+    <script type="text/javascript">
+        // item picker controller (just for testing)
+        app.controller('itemSelectorController', function ($scope, $rootScope) {
+            $scope.clickItem = function (id) {
+                $rootScope.$broadcast('itemSelected', id);
+                $scope.selectedItemId = id;
+            }
+        });
+
+        app.controller('contentController', function ($state, $scope) {
+            $scope.$state = $state;
+        });
+    </script>
+
+
+
+    <script type="text/ng-template" id="contentTemplate">
+        <h3>state: {{$state.current.name}}</h3>
+    </script>
+</body>
+</html>
