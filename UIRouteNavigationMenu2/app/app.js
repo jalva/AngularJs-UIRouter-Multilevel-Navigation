@@ -43,6 +43,14 @@ app.config(function ($stateProvider, $locationProvider, uiStates) {
             case 'newWindow':
                 s.onEnter = newWindow;
         }
+        if (s.component) {
+            delete s.controller;
+            delete s.templateUrl;
+            delete s.template;
+        }
+        else {
+            delete s.component;
+        }
         $stateProvider.state(s);
     })
 

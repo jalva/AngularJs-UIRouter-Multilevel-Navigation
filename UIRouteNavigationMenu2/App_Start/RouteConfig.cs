@@ -16,7 +16,7 @@ namespace UIRouteNavigationMenu
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Root", action = "Shell", id = UrlParameter.Optional }
             );
         }
     }
