@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIRouteNavigationMenu2", "UIRouteNavigationMenu2\UIRouteNavigationMenu2.csproj", "{35108C33-7F77-40C2-B028-325EEED9CAAE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIRouteNavigationMenu", "UIRouteNavigationMenu2\UIRouteNavigationMenu.csproj", "{35108C33-7F77-40C2-B028-325EEED9CAAE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +18,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D8CCB903-360D-4A4F-B827-4CBF49B7C66A}
 	EndGlobalSection
 EndGlobal

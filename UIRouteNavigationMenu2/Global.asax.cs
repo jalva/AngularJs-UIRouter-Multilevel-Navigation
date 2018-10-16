@@ -8,7 +8,7 @@ using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.Http;
 
-namespace UIRouteNavigationMenu2
+namespace UIRouteNavigationMenu
 {
     public class Global : HttpApplication
     {

@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace UIRouteNavigationMenu2
+namespace UIRouteNavigationMenu
 {
     public class RouteConfig
     {

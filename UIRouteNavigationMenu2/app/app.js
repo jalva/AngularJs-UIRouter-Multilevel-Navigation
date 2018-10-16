@@ -4,6 +4,28 @@ app.controller('cntrlr', function cntrlr($state, $scope) {
     $scope.$state = $state;
 });
 
+function cntrlr() {
+    this.greeting = 'hello';
+
+    this.toggleGreeting = function () {
+        this.greeting = (this.greeting == 'hello') ? 'whats up' : 'hello'
+    }
+}
+
+app.component('comp1', {
+    template: '<h3>{{$ctrl.greeting}} comp1</h3>' +
+    '<button ng-click="$ctrl.toggleGreeting()">toggle greeting</button>',
+
+    controller: cntrlr
+});
+
+app.component('comp2', {
+    template: '<h3>{{$ctrl.greeting}} comp2</h3>' +
+    '<button ng-click="$ctrl.toggleGreeting()">toggle greeting</button>',
+
+    controller: cntrlr
+})
+
 app.config(function ($stateProvider, $locationProvider, uiStates) {
 
     // method that will open a new  browser window (used for the side menu commands)

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Web.Http.Dependencies;
 
-namespace UIRouteNavigationMenu2.Models
+namespace UIRouteNavigationMenu.Models
 {
     public class UnityResolver : IDependencyResolver
     {

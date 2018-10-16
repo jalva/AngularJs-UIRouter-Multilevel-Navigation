@@ -4,10 +4,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
-using UINavigation2Controller.Models2;
-using UIRouteNavigationMenu2.Models;
+using UINavigationController.Models;
+using UIRouteNavigationMenu.Models;
 
-namespace UIRouteNavigationMenu2
+namespace UIRouteNavigationMenu
 {
     public static class WebApiConfig
     {

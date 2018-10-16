@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UINavigation2Controller.Models2
+namespace UINavigationController.Models
 {
     public class UiRouterState
     {
@@ -13,5 +13,7 @@ namespace UINavigation2Controller.Models2
         public string TemplateUrl { get; set; }
         public string Controller { get; set; }
         public string Behavior { get; set; }
+        public string Component { get; set; }
+        public string Resolver { get; set; }
     }
 }

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UINavigation2Controller.Models2
+namespace UINavigationController.Models
 {
     /// <summary>
     /// Builds the json used by the navigation menu angular component.
@@ -24,8 +24,8 @@ namespace UINavigation2Controller.Models2
 
             return new List<NavMenuItem>
             {
-                new NavMenuItem {Name="item 1", Level=1, State="item 1.item 1_1" },
-                new NavMenuItem {Name="item 2", Level=1, State="item 2.item 2_1" },
+                new NavMenuItem {Name="item 1", Level=1, State="item 1" },
+                new NavMenuItem {Name="item 2", Level=1, State="item 2" },
                 new NavMenuItem {Name="item 3", Level=1, State="item 3.item 3_1" },
                 new NavMenuItem {Name="item 1_1", Level=2, State="item 1.item 1_1" },
                 new NavMenuItem {Name="item 1_2", Level=2, State="item 1.item 1_2" },

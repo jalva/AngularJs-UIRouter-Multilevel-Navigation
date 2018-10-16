@@ -3,7 +3,7 @@ using Newtonsoft.Json.Serialization;
 using System.IO;
 using System.Web.Mvc;
 
-namespace UINavigation2Controller.Models2
+namespace UINavigationController.Models
 {
     public static class CustomHelpers
     {

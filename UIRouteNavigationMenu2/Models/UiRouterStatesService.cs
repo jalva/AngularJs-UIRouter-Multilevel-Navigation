@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace UINavigation2Controller.Models2
+namespace UINavigationController.Models
 {
     public interface IUiRouterStatesService
     {

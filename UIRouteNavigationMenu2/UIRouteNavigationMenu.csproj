@@ -12,8 +12,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UIRouteNavigationMenu2</RootNamespace>
-    <AssemblyName>UIRouteNavigationMenu2</AssemblyName>
+    <RootNamespace>UIRouteNavigationMenu</RootNamespace>
+    <AssemblyName>UIRouteNavigationMenu</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -148,16 +148,16 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\RootController.cs" />
-    <Compile Include="Controllers\UINavigation2Controller.cs" />
+    <Compile Include="Controllers\UINavigationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models2\CustomHelpers.cs" />
-    <Compile Include="Models2\INavMenuService.cs" />
-    <Compile Include="Models2\NavMenuItem.cs" />
-    <Compile Include="Models2\UiRouterState.cs" />
-    <Compile Include="Models2\UiRouterStatesService.cs" />
-    <Compile Include="Models2\UnityResolver.cs" />
+    <Compile Include="Models\CustomHelpers.cs" />
+    <Compile Include="Models\INavMenuService.cs" />
+    <Compile Include="Models\NavMenuItem.cs" />
+    <Compile Include="Models\UiRouterState.cs" />
+    <Compile Include="Models\UiRouterStatesService.cs" />
+    <Compile Include="Models\UnityResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -165,7 +165,6 @@
     <Content Include="packages.config" />
     <Content Include="Views\Root\Shell.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="app\navData.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -175,7 +174,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

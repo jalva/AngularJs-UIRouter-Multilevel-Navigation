@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UINavigation2Controller.Models2
+namespace UINavigationController.Models
 {
     public class NavMenuItem
     {

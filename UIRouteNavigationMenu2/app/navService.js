@@ -6,7 +6,7 @@ app.factory('navService', function ($http, $q) {
             return $q(function (resolve, reject) {
                 var navData = sessionStorage.getItem('navData');
                 if (!navData) {
-                    $http.get('/api/uinavigation2')
+                    $http.get('/api/uinavigation')
                         .then(function(data){
                             navData = data.data;
                             sessionStorage.setItem('navData', JSON.stringify(navData));

@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="UIRouteNavigationMenu2.Global" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="UIRouteNavigationMenu.Global" Language="C#" %>
