@@ -42,7 +42,9 @@ namespace UINavigationController.Models
             return states;
 
 
-            return new List<UiRouterState>
+
+            // this here is just for illustrative purposes to show what the list will look like
+            /*return new List<UiRouterState>
             {
                 new UiRouterState { Name="item 1", Url="/item1", TemplateUrl="/app/contentTemplate.html", Controller="cntrlr" },
                 new UiRouterState { Name="item 2", Url="/item2", TemplateUrl="/app/contentTemplate.html", Controller="cntrlr" },
@@ -82,7 +84,7 @@ namespace UINavigationController.Models
                 new UiRouterState { Name="item 3.item 3_2.item 3_2_2", Url="/item3_2_2?itemId", TemplateUrl="/app/contentTemplate.html", Controller="cntrlr", Behavior="newWindow" },
                 new UiRouterState { Name="item 3.item 3_3.item 3_3_1", Url="/item3_3_1?itemId", TemplateUrl="/app/contentTemplate.html", Controller="cntrlr", Behavior="newWindow" },
                 new UiRouterState { Name="item 3.item 3_3.item 3_3_2", Url="/item3_3_2?itemId", TemplateUrl="/app/contentTemplate.html", Controller="cntrlr", Behavior="newWindow" }
-            };
+            };*/
         }
     }
 }

@@ -254,7 +254,8 @@ namespace UINavigationController.Models
             return states;
 
 
-            return new List<NavMenuItem>
+            // this here is just for illustrative purposes to show what the list will look like
+            /*return new List<NavMenuItem>
             {
                 new NavMenuItem {Name="item 1", Level=1, State="item 1" },
                 new NavMenuItem {Name="item 2", Level=1, State="item 2" },
@@ -294,7 +295,7 @@ namespace UINavigationController.Models
                 new NavMenuItem {Name="item 3_2_2", Level=3, State="item 3.item 3_2.item 3_2_2" },
                 new NavMenuItem {Name="item 3_3_1", Level=3, State="item 3.item 3_3.item 3_3_1" },
                 new NavMenuItem {Name="item 3_3_2", Level=3, State="item 3.item 3_3.item 3_3_2" },
-            };
+            };*/
         }
         
     }
