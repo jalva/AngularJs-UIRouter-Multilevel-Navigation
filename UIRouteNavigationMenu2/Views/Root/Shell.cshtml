@@ -5,9 +5,6 @@
 <nav class="navbar navbar-default top-nav">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-3 col-md-1">
-
-            </div>
             <div class="col-sm-9 col-md-11">
                 <!-- Top Menu -->
                 <nav-menu level="1"></nav-menu>
@@ -20,15 +17,12 @@
 <nav class="navbar navbar-default sub-nav" style="background-color: lightgray">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-3 col-md-1">
-
-            </div>
             <div class="col-sm-9 col-md-11">
                 <!-- Sub Menu -->
                 <nav-menu level="2"></nav-menu>
                 <!--/-->
 
-                <div style="float:right;margin-right:10%;" ng-controller="itemSelectorController">
+                <div style="float:right;" ng-controller="itemSelectorController">
                     <div class="dropdown">
                         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                             {{selectedItemId || 'Select Item'}}
