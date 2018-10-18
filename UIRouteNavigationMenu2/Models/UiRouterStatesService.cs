@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UIRouteNavigationMenu.Models;
 
 namespace UINavigationController.Models
 {
@@ -10,8 +11,37 @@ namespace UINavigationController.Models
     public class UiRouterStatesService : IUiRouterStatesService
     {
 
+        void getList(List<NavMenu> menuLevelItems, List<UiRouterState> statesList, string urlParentSegments)
+        {
+
+            foreach (var m in menuLevelItems)
+            {
+                var dot = !string.IsNullOrWhiteSpace(urlParentSegments) ? "." : "";
+
+                statesList.Add(new UiRouterState {
+                    Name = $"{urlParentSegments}{dot}{m.Name}",
+                    Url = $"/{m.UrlSegment}",
+                    TemplateUrl = m.TemplateUrl,
+                    Controller = m.Controller,
+                    Component = m.Component,
+                    Behavior = m.Behavior != NavItemBehavior.None ? m.Behavior.ToString() : "" });
+            }
+
+            foreach (var m in menuLevelItems)
+            {
+                var dot = !string.IsNullOrWhiteSpace(urlParentSegments) ? "." : "";
+
+                getList(m.Children, statesList, $"{urlParentSegments}{dot}{m.Name}");
+            }
+        }
+
         public IEnumerable<UiRouterState> GetUiRouteStates()
         {
+            var states = new List<UiRouterState>();
+            getList(NavMenuService.Menu.Children, states, "");
+            return states;
+
+
             return new List<UiRouterState>
             {
                 new UiRouterState { Name="item 1", Url="/item1", TemplateUrl="/app/contentTemplate.html", Controller="cntrlr" },

@@ -28,7 +28,7 @@
                 <nav-menu level="2"></nav-menu>
                 <!--/-->
 
-                <div style="float:right;" ng-controller="itemSelectorController">
+                <div style="float:right;margin-right:10%;" ng-controller="itemSelectorController">
                     <div class="dropdown">
                         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                             {{selectedItemId || 'Select Item'}}
@@ -49,19 +49,21 @@
 
 
 
-<div class="container-fluid">
+<div class="container">
     <div class="row">
-        <div class="col-sm-3 col-md-1">
+        <div class="col-sm-3 col-md-2">
             <nav class="navbar navbar-default side-nav">
+
                 <!-- Side Menu-->
                 <nav-menu level="3"></nav-menu>
-                <!--/-->
+
             </nav>
         </div>
-        <div class="col-sm-9 col-md-11" style="">
+        <div class="col-sm-9 col-md-10" style="">
+
             <!-- The Main Content -->
             <ui-view></ui-view>
-            <!-- /-->
+
         </div>
     </div>
 </div>

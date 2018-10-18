@@ -116,7 +116,6 @@
   <ItemGroup>
     <Content Include="app\app.js" />
     <Content Include="app\contentTemplate.html" />
-    <Content Include="app\index.html" />
     <Content Include="app\item-picker-controller.js" />
     <Content Include="app\nav-menu-component.js" />
     <Content Include="app\navMenuTemplate.html" />
@@ -154,6 +153,7 @@
     </Compile>
     <Compile Include="Models\CustomHelpers.cs" />
     <Compile Include="Models\INavMenuService.cs" />
+    <Compile Include="Models\NavMenu.cs" />
     <Compile Include="Models\NavMenuItem.cs" />
     <Compile Include="Models\UiRouterState.cs" />
     <Compile Include="Models\UiRouterStatesService.cs" />

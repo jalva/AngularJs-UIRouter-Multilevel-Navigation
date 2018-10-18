@@ -1,4 +1,5 @@
 ﻿@using UINavigationController.Models
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,7 +40,7 @@
             font-size: 1.2em;
         }
 
-        a.disabled {
+        .navbar-nav > li > a.disabled {
             color: #AAAAAA;
             cursor: default;
             pointer-events: none;
@@ -65,6 +66,7 @@
     <script type="text/javascript" src="/app/navService.js"></script>
     <script type="text/javascript" src="/app/nav-menu-component.js"></script>
     <script type="text/javascript" src="/app/item-picker-controller.js"></script>
+    
     <script type="text/javascript">
         app.constant("uiStates", @Html.Raw(Html.GetUiRouterStates()));
     </script>
