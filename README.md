@@ -1,4 +1,4 @@
-# UIRouterMultilevelNavigation
+# AngularJs UIRouter Multilevel Declarative Navigation
 An AngularJs and UIRouter multilevel navigation menu easily declared on the server-side
 
 An example showing one approach on how to programmatically build a multilevel navigation menu. This approach can be useful when this menu is declared in a database or a json file. It can easily incorporate logic to filter out the menu items that a user is allowed to see based on security access rules.
